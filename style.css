@@ -1,0 +1,322 @@
+/* Configuração de Variáveis e Reset */
+:root {
+    --bg-color: #0C001A;
+    --purple-primary: #31067B;
+    --text-color: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Konkhmer Sleokchher', cursive, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Aplicação da fonte Koulen para todos os títulos */
+h1, h2, .section-title, .logo {
+    font-family: 'Koulen', cursive, sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--purple-primary);
+    padding: 20px 60px;
+    border-radius: 0 0 0px 0px; 
+    margin: 0; 
+    width: 100%; 
+}
+
+.logo {
+    font-size: 45px; 
+    font-family: 'Konkhmer Sleokchher', cursive, sans-serif;
+}
+
+.nav-links {
+    background-color: #ffffff;
+    padding: 10px 30px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around; 
+    width: 90%; 
+    max-width: 600px;
+}
+
+.nav-links a {
+    color: var(--purple-primary);
+    text-decoration: none;
+    font-family: 'Konkhmer Sleokchher', cursive, sans-serif; 
+    font-size: 14px;
+    font-weight: normal; 
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 60px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.profile-container {
+    position: relative;
+    flex-shrink: 0;
+    display: inline-block;
+    margin-left: -200px; 
+    margin-top: 10px;
+}
+
+.profile-pic {
+    width: 320px; 
+    height: 320px; 
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--purple-primary); 
+}
+
+.gengar-icon {
+    position: absolute;
+    top: -65px;
+    right: -75px;
+    width: 160px;
+    height: auto;
+    pointer-events: none;
+}
+
+.hero-text h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+    color: #fff;
+    display: inline-block;
+}
+
+/* Efeito do cursor piscando na animação de digitação */
+.typed-cursor {
+    font-weight: 100;
+    color: #fff;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.hero-text p {
+    margin-bottom: 15px;
+    color: #e0e0e0;
+    font-size: 18px; 
+    line-height: 1.7; 
+}
+
+/* Seção de Projetos ocupando toda a largura com degradê no fundo */
+.projects-section {
+    width: 100%;
+    padding: 80px 40px;
+    margin-top: 40px;
+    background: linear-gradient(to bottom, var(--bg-color) 0%, var(--purple-primary) 35%, var(--purple-primary) 65%, var(--bg-color) 100%);
+}
+
+/* Centraliza o título */
+.projects-section .section-title,
+.projects-section .project-card {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+/* Cada linha de projeto */
+.project-card {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 40px; /* Espaçamento entre os projetos */
+    background: transparent; 
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+/* Inverte a ordem  */
+.project-card.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Container branco arredondado da imagem do projeto */
+.project-img-placeholder {
+    width: 420px;
+    height: 240px;
+    background-color: #31067B;
+    border-radius: 20px;
+    flex-shrink: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+.project-description {
+    font-size: 16px;
+    color: #f2f2f2;
+    flex: 1;
+    line-height: 1.7;
+}
+
+/* Seção Skills */
+.skills-section {
+    padding: 60px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Grid principal dividindo em 4 colunas (uma para cada tecnologia/grupo) */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+/* Cada coluna individual */
+.skill-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(49, 6, 123, 0.3);
+    padding: 30px 20px;
+    border-radius: 15px;
+}
+
+/* Container e tamanho da imagem da Hard Skill */
+.tech-icon-container {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.tech-icon {
+    max-height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Lista de Soft Skills dentro da coluna */
+.soft-skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.soft-skills-list li {
+    margin-bottom: 10px;
+    font-size: 17px;
+    color: #e2e2e2;
+}
+
+/* Contato / Footer */
+.contact-section {
+    width: 100%;
+    padding: 60px 40px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 0; /* Mantém as bordas retas igual na referência */
+}
+
+.contact-section .section-title {
+    margin-bottom: 30px;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+/* Estilização dos links/botões de contato dentro do rodapé */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-btn {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsividade Básica para Celular */
+@media (max-width: 768px) {
+    .hero-content, .project-card, .project-card.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .project-img-placeholder {
+        width: 100%;
+        max-width: 350px;
+    }
+}
